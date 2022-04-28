@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="Header.cpp" />
     <ClCompile Include="lab7_2nd_term.cpp" />
+    <ClCompile Include="Source_map.cpp" />
+    <ClCompile Include="Source_sort.cpp" />
+    <ClCompile Include="Source_templ.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />

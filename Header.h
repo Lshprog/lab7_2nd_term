@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 
 namespace graphsort
 {	
@@ -22,8 +23,28 @@ namespace graphsort
 	template <typename T> struct Stack {
 		T arr[20] = { 0 };
 		int index = 0;
-		T pop();
-		void push(T value);
+		
+		T pop()
+		{
+			T k = arr[index];
+			if (index == 0)
+				arr[index] = 0;
+			else
+				index--;
+			return k;
+
+		}
+		
+		void push(T value)
+		{
+			if (arr[index] == 0)
+				arr[index] = value;
+			else {
+				index++;
+				arr[index] = value;
+			}
+
+		}
 	};
 	struct Map {
 		struct KeyVal {

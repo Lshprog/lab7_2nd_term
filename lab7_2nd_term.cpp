@@ -1,6 +1,4 @@
 #include "Header.h"
-#include <iostream>
-
 
 int main()
 {
@@ -16,7 +14,7 @@ int main()
 
     std::string finish = mygraph.create_rpn(func);
 
-    
+
     mygraph.add_edge(1 ,3 ,10);
     mygraph.add_edge(2, 4, 15);
     mygraph.add_edge(1, 2, 8);
