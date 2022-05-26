@@ -1,4 +1,27 @@
 #include "Header.h"
+#include <iostream>
+#include <fstream>
+
+std::ifstream F;
+
+int graphsort::Graph::read_file(const char* FILE_NAME)
+{
+	F.open(FILE_NAME, std::ios::in);
+	int size = 0;
+	F >> size;
+	int v, w, s; 
+	list = new graphsort::LinkedList[size*size];
+
+	while (!F.eof()){
+		F >> v;
+		F >> w;
+		F >> s;
+		add_edge(v,w,s);
+	} 
+
+	F.close();
+	return size;
+}
 
 
 graphsort::LinkedList::Node::Node(int v, int value)
@@ -25,6 +48,10 @@ graphsort::LinkedList::Node::Node(int w_temp, int v, int value)
 graphsort::Graph::Graph(int ver)
 {
 	this->ver = ver;
+}
+graphsort::Graph::Graph()
+{
+	this->ver = 0;
 }
 
 void graphsort::Graph::add_edge(int v, int w, int value)

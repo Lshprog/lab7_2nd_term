@@ -117,3 +117,4 @@ int graphsort::Graph::functionate(int value, std::string func)
 	return stack.pop();
 
 }
+

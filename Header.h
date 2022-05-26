@@ -61,6 +61,7 @@ namespace graphsort
 	};
 	struct Graph {
 		Graph(int ver);
+		Graph();
 		LinkedList *list;
 		int ver;
 		void mergesort(LinkedList::Node* all_edges,int const begin, int const end);
@@ -70,6 +71,7 @@ namespace graphsort
 		void add_edge(int v,int w, int value);
 		std::string create_rpn(std::string func);
 		int functionate(int value,std::string func);
+		int read_file(const char* name);
 		
 	};
 	
